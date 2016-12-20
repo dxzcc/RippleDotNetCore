@@ -1,0 +1,52 @@
+﻿using System.Threading.Tasks;
+using RippleDotNetCore.Rippled.Client.RpcJson.Requests.Transactions;
+using RippleDotNetCore.Rippled.Interfaces;
+using RippleDotNetCore.Rippled.Models.Responses.Transactions;
+
+namespace RippleDotNetCore.Rippled.Client.RpcJson.Requests
+{
+    public class TransactionRequests : RequestBase
+    {
+        public TransactionRequests(IRippledClient client) : base(client) { }
+
+        public async Task<RpcJsonResponse<TransactionEntryResult>> TxAsync (TxRequest request)
+        {
+            return await PostAsync<RpcJsonResponse<TransactionEntryResult>, TransactionEntryResult>(request);
+        }
+
+        public async Task<RpcJsonResponse<TransactionEntryResult>> TransactionEntryAsync(TransactionEntryRequest request)
+        {
+            return await PostAsync<RpcJsonResponse<TransactionEntryResult>, TransactionEntryResult>(request);
+        }
+
+        public async Task<RpcJsonResponse<RipplePathFindResult>> RipplePathFindAsync(RipplePathFindRequest request)
+        {
+            return await PostAsync<RpcJsonResponse<RipplePathFindResult>, RipplePathFindResult>(request);
+        }
+
+        public async Task<RpcJsonResponse<SignResult>> SignAsync(SignRequest request)
+        {
+            return await PostAsync<RpcJsonResponse<SignResult>, SignResult>(request);
+        }
+
+        public async Task<RpcJsonResponse<SignResult>> SignForAsync(SignForRequest request)
+        {
+            return await PostAsync<RpcJsonResponse<SignResult>, SignResult>(request);
+        }
+
+        public async Task<RpcJsonResponse<SubmitResult>> SubmitOnlyAsync(SubmitOnlyRequest request)
+        {
+            return await PostAsync<RpcJsonResponse<SubmitResult>, SubmitResult>(request);
+        }
+
+        public async Task<RpcJsonResponse<SubmitResult>> SubmitMultisignedAsync(SubmitMultisignedRequest request)
+        {
+            return await PostAsync<RpcJsonResponse<SubmitResult>, SubmitResult>(request);
+        }
+
+        public async Task<RpcJsonResponse<BookOffersResult>> BookOffersAsync(BookOffersRequest request)
+        {
+            return await PostAsync<RpcJsonResponse<BookOffersResult>, BookOffersResult>(request);
+        }
+    }
+}

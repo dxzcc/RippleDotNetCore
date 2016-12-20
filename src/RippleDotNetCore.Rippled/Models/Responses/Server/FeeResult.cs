@@ -1,0 +1,14 @@
+﻿using RippleDotNetCore.Rippled.Models.Shared.Server;
+
+namespace RippleDotNetCore.Rippled.Models.Responses.Server
+{
+    public class FeeResult : RippledResult
+    {
+        public string CurrentLedgerSize { get; set; }
+        public string CurrentQueueSize { get; set; }
+        public Drops Drops { get; set; }
+        public string ExpectedLedgerSize { get; set; }
+        public Levels Levels { get; set; }
+        public string MaxQueueSize { get; set; }
+    }
+}

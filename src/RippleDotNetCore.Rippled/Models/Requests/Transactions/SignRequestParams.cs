@@ -1,0 +1,18 @@
+﻿using RippleDotNetCore.Rippled.Interfaces;
+
+namespace RippleDotNetCore.Rippled.Models.Requests.Transactions
+{
+    public class SignRequestParams
+    {
+        public ITransaction TxJson { get; set; }
+        public string Secret { get; set; }
+        public string Seed { get; set; }
+        public string SeedHex { get; set; }
+        public string Passphrase { get; set; }
+        public string KeyType { get; set; } 
+        public bool Offline { get; set; }
+        public bool BuildPath { get; set; }
+        public int FeeMultMax { get; set; }
+        public int FeeDivMax { get; set; }
+    }
+}
