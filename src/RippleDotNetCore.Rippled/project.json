@@ -2,7 +2,6 @@
   "version": "1.0.0-*",
 
   "dependencies": {
-    "Microsoft.VisualStudio.clrdbg": "14.0.25520-preview-3139256",
     "NETStandard.Library": "1.6.1",
     "Newtonsoft.Json": "9.0.1",
     "System.Globalization": "4.3.0",

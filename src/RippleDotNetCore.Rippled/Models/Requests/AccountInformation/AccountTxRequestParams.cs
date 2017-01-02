@@ -10,6 +10,6 @@
         public bool Binary { get; set; }
         public bool Forward { get; set; }
         public int? Limit { get; set; }
-        public string Marker { get; set; }
+        public object Marker { get; set; }
     }
 }
